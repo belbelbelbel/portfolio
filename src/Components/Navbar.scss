@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;1,200;1,600&family=Bona+Nova&family=Poppins:ital,wght@0,400;1,600;1,700&display=swap');
+
+.navbar {
+    background: black;
+    height: 90px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Archivo', sans-serif, 'Bona Nova', serif, 'Poppins', sans-serif;
+    ;
+
+
+    &_container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0px 20px;
+        height: inherit;
+        flex: 1;
+
+        &_logo {
+            color: orange;
+            cursor: pointer;
+        }
+
+
+    }
+}
+
+.navbar-container-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-icon {
+    display: none;
+}
+
+.item {
+    padding: 1.3rem;
+    line-height: 1.5rem;
+    font-size: 1.4rem;
+    text-shadow: 0 0 0.3vw orange;
+}
+
+.item:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: transparent;
+    transition: 1s ease;
+}
+
+.item:hover::after {
+    background-color: orange;
+    text-shadow: 0 0 0.3vw orange;
+    width: 80%;
+}
+
+.link {
+    color: orange;
+    text-shadow: 0 0 0.3vw orange;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+@media only screen and (max-width: 890px) {
+    .navbar-container-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        border-top: 1px solid white;
+        position: absolute;
+        top: 80px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        left: -110%;
+        height: 100vh;
+    }
+    .item:hover::after {
+        background-color: orange;
+        width: 100%;
+        opacity: 0;
+    }
+
+    .navbar-container-menu.active {
+        left: 0;
+        background-color: black;
+        opacity: 1;
+    }
+    .nav-icon {
+        display: block;
+        cursor: pointer;
+        color: orange;
+        padding: 1.5rem;
+    }
+    .item {
+        padding: 25px 10px;
+        margin: 0;
+        border-bottom: 1px solid black;
+    }
+    
+   
+}

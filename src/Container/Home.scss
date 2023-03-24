@@ -1,0 +1,74 @@
+.home {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.home.home_textwrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 60%;
+}
+h1 {
+    line-height: 8rem;
+    font-size: 6rem;
+    color: rgb(192, 128, 11);
+    padding:  0px;
+    align-self: center;
+    position: relative;
+    width: auto;
+    font-family: cursive;
+    top: -20%;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingEffectAnimation 2s steps(40,end);
+   
+}
+button {
+    padding: 0.5rem 3rem;
+    color: black;
+    background-color: rgb(208, 139, 10);
+    border-radius: 0.6rem;
+    font-size: larger;
+    font-family: cursive;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: orange;
+}
+
+@media only screen  and (max-width:550px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+}
+@media only screen and (min-width: 551px) and (max-width:768px) {
+    h1 {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width:990px) {
+    h1 {
+        font-size: 5rem;
+        line-height: 7.6rem;
+    } 
+}
+@keyframes typingEffectAnimation{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}

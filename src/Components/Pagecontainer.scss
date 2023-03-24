@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: orange;
+}
+h2 {
+   font-size:2rem;
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+   font-family: cursive;
+   line-height: 1rem;
+   display: flex;
+   color: darkorange;
+   text-transform: capitalize;
+   flex-grow: 1;
+}
+span {
+    svg {
+        color: darkorange;
+    }
+    cursor: pointer;
+}
+
